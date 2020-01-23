@@ -25,6 +25,32 @@ void draw() {
     withdraw2.tegnKnap("Overfør -100 kr");
     balanceD.tegnKnap("Konto 1: "+balance1);
     balanceD2.tegnKnap("Konto 2: "+balance2);
+    
+    if((deposit.knapTrykket == true)&&(balance2 > 0)){
+            balance1 += deposit.value; 
+          balance2 -= deposit.value;
+          deposit.knapTrykket = false;
+    }
+    if((deposit2.knapTrykket == true)&&(balance1 > 0)){
+            balance2 += deposit.value; 
+          balance1 -= deposit.value;
+          deposit2.knapTrykket = false;
+    }
+    
+        if((withdraw.knapTrykket == true)&&(balance1 > 0)){
+            balance2 += deposit.value; 
+          balance1 -= deposit.value;
+          withdraw.knapTrykket = false;
+    }
+    if((withdraw2.knapTrykket == true)&&(balance2 > 0)){
+            balance1 += deposit.value; 
+          balance2 -= deposit.value;
+          withdraw2.knapTrykket = false;
+    }
+    
+    
+    
+    
   }
 }
 

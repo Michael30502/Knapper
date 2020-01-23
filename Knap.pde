@@ -35,17 +35,21 @@ class Knap {
 
 
     if ((mouseX< positionX + bredde) && (mouseX>positionX) &&(mouseY<positionY +hojde ) && (mouseY> positionY)) {
-      if (mouseX < width/2 ) {
-        if (value+balance1>=0) {
-          balance1 += value; 
-          balance2 -= value;
-        }
-      } else {
-        if (value+balance2>=0) {
-          balance2 += value;
-          balance1 -= value;
-        }
-      }
+knapTrykket = true;
+
+
+    if((deposit.knapTrykket == true)&&(balance2 > 0)){
+            balance1 += deposit.value; 
+          balance2 -= deposit.value;
+          deposit.knapTrykket = false;
+    }
+    if((deposit2.knapTrykket == true)&&(balance1 > 0)){
+            balance2 += deposit.value; 
+          balance1 -= deposit.value;
+          deposit2.knapTrykket = false;
+    }
+
+
     }
   }
 }
