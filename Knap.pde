@@ -37,17 +37,17 @@ class Knap {
     if ((mouseX< positionX + bredde) && (mouseX>positionX) &&(mouseY<positionY +hojde ) && (mouseY> positionY)) {
 knapTrykket = true;
 
-
-    if((deposit.knapTrykket == true)&&(balance2 > 0)){
-            balance1 += deposit.value; 
-          balance2 -= deposit.value;
+if(bank==true){
+    if((deposit.knapTrykket == true)&&(account2.balance > 0)){
+            account1.balance += deposit.value; 
+          account2.balance -= deposit.value;
           deposit.knapTrykket = false;
     }
-    if((deposit2.knapTrykket == true)&&(balance1 > 0)){
-            balance2 += deposit.value; 
-          balance1 -= deposit.value;
+    if((deposit2.knapTrykket == true)&&(account1.balance > 0)){
+            account2.balance += deposit.value; 
+          account1.balance -= deposit.value;
           deposit2.knapTrykket = false;
-    }
+    }}
 
 
     }
